@@ -1,0 +1,8 @@
+name: Issue tracker testing
+on: issues
+jobs: 
+  new_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print issue title
+        run: echo ${{ github.event.issue.title }}
